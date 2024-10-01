@@ -1,0 +1,36 @@
+Instance Variables:
+
+private int x1 - This variable represents the 1st x-coordinate
+private int y1 - This variable represents the 1st y-coordinate
+private int x2 - This variable represents the 2nd x-coordinate
+private int y2 - This variable represents the 2nd y-coordinate
+
+
+
+Constructor:
+
+public LinearEquation(int x1, int y1, int x2, int y2)
+
+
+
+Methods:
+
+public String toString()
+{
+Returns String w/ coordinate points, slope, y intercept, slope intercept form equation of line, and distance between points
+}
+
+public double calculateSlope(int x1, int y1, int x2, int y2)
+{
+calculates slope of line from coordinates
+}
+
+public double yIntercept(int x1, int y1, double slope)
+{
+calculates y intercept from coordinate and slope
+}
+
+public double calculateDistance(int x1, int y1, int x2, int y2)
+{
+calculates distance between the coordinates inputted
+}
