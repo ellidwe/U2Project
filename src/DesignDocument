@@ -4,7 +4,7 @@ private int x1 - This variable represents the 1st x-coordinate
 private int y1 - This variable represents the 1st y-coordinate
 private int x2 - This variable represents the 2nd x-coordinate
 private int y2 - This variable represents the 2nd y-coordinate
-
+private int x3 - This variable represents the 3rd x-coordinate
 
 
 Constructor:
@@ -25,7 +25,7 @@ public double calculateSlope(int x1, int y1, int x2, int y2)
 calculates slope of line from coordinates
 }
 
-public double yIntercept(int x1, int y1, double slope)
+public double calculateYIntercept(int x1, int y1, double slope)
 {
 calculates y intercept from coordinate and slope
 }
@@ -34,3 +34,25 @@ public double calculateDistance(int x1, int y1, int x2, int y2)
 {
 calculates distance between the coordinates inputted
 }
+
+public String thirdCoordinate(int x3)
+{
+calculates the 3rd coordinate based on the inputted x value
+}
+
+EquationRunner.java
+
+Step 1: Ask user to enter first coordinate point
+Step 2: Get coordinate as a string
+Step 3: Find integer values for x and y in string
+Step 4: Ask user to enter second coordinate point
+Step 5: Find integer values for x and y in string
+Step 6: Create LinearEquation object with inputted values
+Step 7: Find slope, y intercept, and distance of LinearEquation object
+Step 8: Return those values and the slope intercept form as a string
+Step 9: Print that string
+Step 10: Ask user to enter 3rd x coordinate
+Step 11: Calculate the coordinate on the line with that x value and return as string
+Step 12: Print that string
+
+
