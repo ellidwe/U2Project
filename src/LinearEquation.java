@@ -21,7 +21,17 @@ public class LinearEquation {
 
     public String equationSlope()
     {
-        return (y2 - y1) + "/" + (x2 - x1);
+        double x = x2 - x1;
+        double y = y2 - y1;
+
+        if ((y / x) % 1 == 0) //Checks if y/x is a whole number
+        {
+            return ((int) (y / x)) + " "; //Returns as a whole number
+        }
+        else
+        {
+            return "placehold";
+        }
     }
 
     public double yIntercept()
