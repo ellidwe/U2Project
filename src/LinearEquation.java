@@ -15,17 +15,29 @@ public class LinearEquation {
 
     public double slope()
     {
-        return ((double) (y2 - y1)) / ((double) (x2 - x1));
+        double slopeRound = Math.round(((double) (y2 - y1)) / ((double) (x2 - x1)) * 100);
+        return slopeRound / 100;
+    }
+
+    public String equationSlope()
+    {
+        return "placeholder";
     }
 
     public double yIntercept()
     {
-        return y1 - slope() * x1;
+        double yIntRound =  Math.round(y1 - slope() * x1 * 100);
+        return yIntRound / 100;
     }
 
     public double distance()
     {
-        return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+        double aSquared = Math.pow((x2 - x1), 2);
+        double bSquared = Math.pow((y2 - y1), 2);
+        double cSquared = aSquared + bSquared;
+        double c = Math.sqrt(cSquared);
+        double cRound = Math.round(c * 100);
+        return cRound / 100;
     }
 
     public String toString()
@@ -37,6 +49,11 @@ public class LinearEquation {
                 + "The y intercept of the line is: " + yIntercept() + "\n"
                 + "The distance between the two points is: " + distance();
 
+     }
+
+     public String thirdCoordinate(double x3)
+     {
+         return "(" + x3 + "," + ((slope() * x3 + yIntercept())) + ")";
      }
 
 }

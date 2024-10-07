@@ -31,6 +31,14 @@ public class LinearEquationRunner {
 
         LinearEquation equation = new LinearEquation(x1, y1, x2, y2);
 
+        System.out.println();
         System.out.println(equation.toString());
+        System.out.println();
+
+        System.out.print("Enter a third x value: ");
+        String x3String = s.nextLine(); //User enters their third x value
+        double x3 = Double.parseDouble(x3String); //Makes a double with the value of x3
+
+        System.out.println("The coordinate on the line with that x value is: " + equation.thirdCoordinate(x3));
     }
 }
