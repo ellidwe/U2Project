@@ -26,7 +26,18 @@ public class LinearEquation {
 
         if ((y / x) % 1 == 0) //Checks if y/x is a whole number
         {
-            return ((int) (y / x)) + " "; //Returns as a whole number
+            if ((y / x) == 1) //Checks if whole number slope is 1
+            {
+                return ""; //Returns an empty string instead of 1
+            }
+            else if ((y / x) == -1) //Checks if whole number slope is -1
+            {
+                return "-"; //Returns a negative sign instead of 1
+            }
+            else
+            {
+                return ((int) (y / x)) + " "; //Returns as a whole number
+            }
         }
         else
         {
