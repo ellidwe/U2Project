@@ -45,6 +45,10 @@ public class LinearEquation {
             {
                 return (-1 * (y2 - y1)) + "/" + (-1 * (x2 - x1)); //Returns with negative sign in numerator rather than denominator
             }
+            else if ((x2 - x1) < 0 && (y2 - y1) < 0) //Checks if both numerator and denominator are negative
+            {
+                return (-1 * (y2 - y1)) + "/" + (-1 * (x2 - x1)); //Returns with numerator and denominator as positive numbers
+            }
             return (y2 - y1) + "/" + (x2 - x1); //Returns as fraction
         }
     }
