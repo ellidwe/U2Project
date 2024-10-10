@@ -75,6 +75,18 @@ public class LinearEquation {
         }
     }
 
+    public String formEquation()
+    {
+        if (yIntercept() == 0 && slope() == 0)
+        {
+            return "y = 0";
+        }
+        else
+        {
+            return "y = " + equationSlope() + "x " + equationYIntercept() + "\n";
+        }
+    }
+
     public double distance()
     {
         double aSquared = Math.pow((x2 - x1), 2);
@@ -89,7 +101,7 @@ public class LinearEquation {
     {
         return "The first coordinate is: (" + x1 + "," + y1 + ")\n"
                 + "The second coordinate is: (" + x2 + "," + y2 + ")\n"
-                + "The equation of the line is: y = " + equationSlope() + "x " + equationYIntercept() + "\n"
+                + "The equation of the line is: " + formEquation()
                 + "The slope of the line is: " + slope() +"\n"
                 + "The y intercept of the line is: " + yIntercept() + "\n"
                 + "The distance between the two points is: " + distance();
