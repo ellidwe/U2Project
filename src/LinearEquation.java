@@ -61,17 +61,17 @@ public class LinearEquation {
 
     public String equationYIntercept()
     {
-        if (yIntercept() == 0)
+        if (yIntercept() == 0) //Checks if y intercept is equal to 0
         {
-            return "";
+            return ""; //Returns an empty string instead of "+ 0"
         }
         else if (yIntercept() > 0)
         {
             return "+ " + yIntercept();
         }
-        else
+        else //Is true if y intercept is negative
         {
-            return "- " + Math.abs(yIntercept());
+            return "- " + Math.abs(yIntercept()); //Returns the y intercept being subtracted instead of it being added as a negative value
         }
     }
 
@@ -83,7 +83,7 @@ public class LinearEquation {
         }
         else
         {
-            return "y = " + equationSlope() + "x " + equationYIntercept() + "\n";
+            return "y = " + equationSlope() + "x " + equationYIntercept() + "\n"; //Concatenates slope, intercept, and other strings to form the equation
         }
     }
 
