@@ -36,12 +36,16 @@ public class LinearEquation {
             }
             else
             {
-                return ((int) (y / x)) + " "; //Returns as a whole number
+                return ((int) (y / x)) + ""; //Returns as a whole number
             }
         }
         else
         {
-            return "placehold";
+            if ((x2 - x1) < 0 && (y2 - y1) >= 0) //Checks if denominator is negative and numerator is positive
+            {
+                return (-1 * (y2 - y1)) + "/" + (-1 * (x2 - x1)); //Returns with negative sign in numerator rather than denominator
+            }
+            return (y2 - y1) + "/" + (x2 - x1); //Returns as fraction
         }
     }
 
