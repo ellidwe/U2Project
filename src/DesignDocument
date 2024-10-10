@@ -20,17 +20,32 @@ public String toString()
 Returns String w/ coordinate points, slope, y intercept, slope intercept form equation of line, and distance between points
 }
 
-public double calculateSlope()
+public double slope()
 {
 calculates slope of line from coordinates
 }
 
-public double calculateYIntercept()
+public String equationSlope()
+{
+creates a better formatted slope for use in the equation
+}
+
+public double yIntercept()
 {
 calculates y intercept from coordinate and slope
 }
 
-public double calculateDistance()
+public String equationYIntercept()
+{
+creates a better formatted y intercept for use in the equation
+}
+
+public String formEquation()
+{
+forms the equation by concatenating the y intercept string, the slope string, and other strings
+}
+
+public double distance()
 {
 calculates distance between the coordinates inputted
 }
@@ -44,16 +59,19 @@ calculates the 3rd coordinate based on the inputted x value
 EquationRunner.java
 
 Step 1: Ask user to enter first coordinate point
-Step 2: Get coordinate as a string
-Step 3: Find integer values for x and y in string
-Step 4: Ask user to enter second coordinate point
-Step 5: Find integer values for x and y in string
-Step 6: Create LinearEquation object with inputted values
-Step 7: Find slope, y intercept, and distance of LinearEquation object
-Step 8: Return those values and the slope intercept form as a string
-Step 9: Print that string
-Step 10: Ask user to enter 3rd x coordinate
-Step 11: Calculate the coordinate on the line with that x value and return as string
+Step 2: Assign coordinate point to a string variable
+Step 3: Isolate x and y values from coordinate string
+Step 4: Assign values of x and y to int variables
+Step 5: Ask user to enter second coordinate point
+Step 6: Assign coordinate point to a string variable
+Step 7: Isolate x and y values from coordinate string
+Step 8: Assign values of x and y to int variables
+Step 9: Create LinearEquation object with inputted values
+Step 10: Find slope, y intercept, and distance of LinearEquation object using slope, yIntercept, and distance methods
+Step 11: Assign those values and the slope intercept form to a string variable using toString method
 Step 12: Print that string
+Step 13: Ask user to enter 3rd x coordinate
+Step 14: Calculate the coordinate on the line with that x value and return as string
+Step 15: Print that string
 
 
