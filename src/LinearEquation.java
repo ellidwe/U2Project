@@ -55,8 +55,24 @@ public class LinearEquation {
 
     public double yIntercept()
     {
-        double yIntRound =  Math.round(y1 - slope() * x1 * 100);
+        double yIntRound =  Math.round((y1 - slope()) * x1 * 100);
         return yIntRound / 100;
+    }
+
+    public String equationYIntercept()
+    {
+        if (yIntercept() == 0)
+        {
+            return "";
+        }
+        else if (yIntercept() > 0)
+        {
+            return "+ " + yIntercept();
+        }
+        else
+        {
+            return "- " + Math.abs(yIntercept());
+        }
     }
 
     public double distance()
@@ -73,7 +89,7 @@ public class LinearEquation {
     {
         return "The first coordinate is: (" + x1 + "," + y1 + ")\n"
                 + "The second coordinate is: (" + x2 + "," + y2 + ")\n"
-                + "The equation of the line is: y = " + equationSlope() + "x + " + yIntercept() + "\n"
+                + "The equation of the line is: y = " + equationSlope() + "x " + equationYIntercept() + "\n"
                 + "The slope of the line is: " + slope() +"\n"
                 + "The y intercept of the line is: " + yIntercept() + "\n"
                 + "The distance between the two points is: " + distance();
