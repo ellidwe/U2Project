@@ -55,8 +55,8 @@ public class LinearEquation {
 
     public double yIntercept()
     {
-        double yIntRound =  Math.round((y1 - slope()) * x1 * 100);
-        return yIntRound / 100;
+        double yIntRound =  Math.round((y1 - (slope() * x1)) * 100);
+        return yIntRound / 100.0;
     }
 
     public String equationYIntercept()
